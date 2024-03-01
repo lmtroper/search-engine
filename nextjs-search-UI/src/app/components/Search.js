@@ -22,7 +22,7 @@ const Search = ({ prevQuery, onSubmit, setElpasedTime }) => {
 
   const handleSearch = async (e) => {
     const queryResults = await searchAPI(query)
-    onSubmit(queryResults.results)
+    onSubmit(query, queryResults.results)
     const time = queryResults.elapsedTime / 1000
     setElpasedTime(time.toFixed(2))
     sessionStorage.setItem('prevQuery',JSON.stringify(query))
