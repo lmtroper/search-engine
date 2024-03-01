@@ -123,18 +123,6 @@ body{
   fill: #fff;
 }
 
-.back-btn{
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  padding: 8px 20px;
-  font-size: 1.2em;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-
 .github-btn{
   background: #6f6f6f;
   color: white;

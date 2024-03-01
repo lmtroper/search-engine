@@ -3,6 +3,7 @@ import React from 'react'
 import { useRouter } from 'next/navigation';
 import { articleFetch } from '../../api';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Page({ params }) {
     const router = useRouter();
@@ -47,11 +48,14 @@ export default function Page({ params }) {
 
     return (
       <div className='w-full overflow-clip px-16'>
-          <Link href="/">
-            <div className='my-10 back-btn'>
-                Back
-            </div>
-          </Link>
+          <div className='w-fit my-10'>
+            <Link href="/" className='flex items-center'>
+              <Image src="/back-arrow.svg" alt="Back" width={25} height={25} />
+              <div className="pl-4" style={{fontSize:'14pt', color:"#484848"}}>
+                  Back
+              </div>
+            </Link>
+          </div>
           <div>
             <div className='article-headline mb-1'>
               <h1>{article.headline}</h1>
